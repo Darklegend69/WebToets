@@ -1,0 +1,53 @@
+/* The Car Deal-oog V2 — Footer and toast layer */
+.tcd-footer {
+  position: relative;
+  overflow: hidden;
+  padding: 4.5rem 0 1.5rem;
+  color: rgba(255, 255, 255, 0.74);
+  background: var(--tcd-navy);
+}
+
+.tcd-footer::before {
+  position: absolute;
+  top: -12rem;
+  right: -10rem;
+  width: 26rem;
+  height: 26rem;
+  content: "";
+  border-radius: 50%;
+  background: rgba(57, 213, 255, 0.08);
+}
+
+.tcd-footer h2,
+.tcd-footer h3 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.tcd-footer a {
+  color: rgba(255, 255, 255, 0.74);
+  text-decoration: none;
+}
+
+.tcd-footer a:hover {
+  color: var(--tcd-cyan);
+}
+
+.footer-logo {
+  width: 120px;
+  padding: 0.4rem;
+  border-radius: 0.85rem;
+  background: #fff;
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.84rem;
+}
+
+.toast-container {
+  z-index: 2000;
+}

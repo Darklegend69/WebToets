@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bedrijfsgegevens, missie, visie, openingstijden en locatie.">
+  <meta name="theme-color" content="#09090b">
+  <title>Over ons | The Car Deal-oog</title>
+  <script>
+    (() => {
+      try {
+        const storedTheme = JSON.parse(localStorage.getItem("tcd_theme"));
+        document.documentElement.dataset.theme = storedTheme === "light" ? "light" : "dark";
+      } catch (error) {
+        document.documentElement.dataset.theme = "dark";
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/navigation.css">
+  <link rel="stylesheet" href="../css/hero.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/forms.css">
+  <link rel="stylesheet" href="../css/backoffice.css">
+  <link rel="stylesheet" href="../css/experiences.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/theme-dark.css">
+  <link rel="stylesheet" href="../css/theme-light.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="about" class="">
+  <a class="skip-link" href="#main-content">Direct naar inhoud</a>
+  <div class="loading-screen" data-loading-screen aria-hidden="true"><div class="loading-mark"><span class="loading-ring"></span><span>THE CAR DEAL-OOG</span></div></div>
+  
+    <nav class="navbar navbar-expand-xl navbar-dark sticky-top tcd-navbar" aria-label="Hoofdnavigatie">
+      <div class="container-fluid px-lg-4">
+        <a class="brand-lockup navbar-brand" href="../Index.html">
+          <img class="brand-logo" src="../images/logo/the-car-deal-oog-logo-v2.png" alt="The Car Deal-oog">
+          <span class="visually-hidden">The Car Deal-oog</span>
+        </a>
+        <div class="d-flex align-items-center gap-2 order-xl-3">
+          <button class="theme-toggle" type="button" role="switch" aria-checked="false" data-theme-toggle aria-label="Schakel naar lichte modus">
+            <span class="theme-toggle-track" aria-hidden="true"><span class="theme-toggle-thumb"></span></span>
+            <span class="theme-toggle-label" data-theme-label>Donker</span>
+          </button>
+          <button class="btn btn-sm navbar-search" type="button" data-bs-toggle="modal" data-bs-target="#searchModal" aria-label="Website doorzoeken">
+            <span aria-hidden="true">⌕</span> <span class="search-label">Zoeken</span>
+          </button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Menu openen">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse order-xl-2" id="mainNavigation">
+          <ul class="navbar-nav ms-auto me-xl-3 align-items-xl-center">
+            <li class="nav-item"><a class="nav-link" data-nav="home" href="../Index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav="cars" href="../templates/cars.html">Auto’s</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Diensten</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" data-nav="services" href="../templates/services.html">Alle diensten</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" data-nav="sell" href="../templates/sell-car.html">Auto verkopen</a></li>
+                <li><a class="dropdown-item" data-nav="buy" href="../templates/buy-car.html">Auto inkopen</a></li>
+                <li><a class="dropdown-item" data-nav="rent" href="../templates/rent-car.html">Auto huren</a></li>
+                <li><a class="dropdown-item" data-nav="finance" href="../templates/financing-insurance.html">Financiering & verzekering</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" data-nav="about" href="../templates/about.html">Over ons</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" data-nav="videos" href="../templates/videos.html">Mijn video’s</a></li>
+                <li><a class="dropdown-item" data-nav="game" href="../templates/game.html">Road Rush game</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" data-nav="account" href="../templates/account.html"><span data-auth-user>Mijn account</span></a></li>
+            <li class="nav-item" data-staff-only hidden><a class="nav-link" data-nav="backoffice" href="../templates/backoffice.html">Backoffice</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <main id="main-content"><section class="page-hero"><div class="container position-relative"><span class="eyebrow">Over ons</span><h1>Een deal begint met vertrouwen</h1><p>Maak kennis met The Car Deal-oog, ons team, onze missie en de manier waarop wij mobiliteit persoonlijk maken.</p></div></section><div class="container page-shell"><div class="row g-4"><div class="col-lg-3">
+    <aside class="external-panel" aria-label="Handige externe autolinks">
+      <div class="external-panel-head"><h2>Handige autolinks</h2></div>
+      <div class="external-panel-list">
+        <a class="external-link" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">
+          <span class="external-icon" aria-hidden="true">⌖</span><span><strong>Google Maps</strong><small>Plan uw route</small></span><span aria-hidden="true">↗</span>
+        </a>
+        <a class="external-link" href="https://www.michelin.com" target="_blank" rel="noopener noreferrer">
+          <span class="external-icon" aria-hidden="true">◉</span><span><strong>Michelin</strong><small>Banden & veiligheid</small></span><span aria-hidden="true">↗</span>
+        </a>
+        <a class="external-link" href="https://www.nhtsa.gov/vehicle-safety" target="_blank" rel="noopener noreferrer">
+          <span class="external-icon" aria-hidden="true">✓</span><span><strong>Vehicle Safety</strong><small>Veiligheidsinformatie</small></span><span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </aside></div><div class="col-lg-9">
+  <section class="content-card mb-4 slide-copy"><span class="eyebrow">Wie wij zijn</span><h2 class="display-6 fw-bold">Een moderne autowebshop met menselijke aandacht.</h2><p class="lead text-muted">The Car Deal-oog helpt klanten in Paramaribo bij iedere stap: van voertuigkeuze tot verkoop, huur, financiering en verzekering.</p></section>
+  <div class="row g-4 mb-4"><div class="col-md-6"><article class="service-card"><span class="service-icon">M</span><h2>Onze missie</h2><p>Autohandel eenvoudiger, transparanter en toegankelijker maken met heldere informatie en persoonlijke begeleiding.</p></article></div><div class="col-md-6"><article class="service-card"><span class="service-icon">V</span><h2>Onze visie</h2><p>De vertrouwde mobiliteitspartner van Suriname worden, waar digitale service en menselijk advies elkaar versterken.</p></article></div></div>
+  <div class="row g-4 mb-4"><div class="col-lg-6"><div class="content-card h-100"><h2 class="h4">Bedrijfsgegevens</h2><address>Anamoestraat 18<br>Paramaribo, Suriname</address><p class="mb-1"><strong>E-mail:</strong> <a href="mailto:info@cardeal-oog.com">info@cardeal-oog.com</a></p><p class="mb-1"><strong>Telefoon:</strong> <a href="tel:+5978882233">+597 888-2233</a></p><p><strong>Manager:</strong> Showroom Manager</p><h3 class="h5 mt-4">Ons team</h3><p class="mb-0">Verkoopadviseurs, voertuiginkopers, verhuurspecialisten en financiële partners werken samen vanuit één klantdossier.</p></div></div><div class="col-lg-6"><div class="content-card h-100"><h2 class="h4">Openingstijden</h2><ul class="opening-list"><li><span>Maandag</span><strong>08:00–17:30</strong></li><li><span>Dinsdag</span><strong>08:00–17:30</strong></li><li><span>Woensdag</span><strong>08:00–17:30</strong></li><li><span>Donderdag</span><strong>08:00–17:30</strong></li><li><span>Vrijdag</span><strong>08:00–17:30</strong></li><li><span>Zaterdag</span><strong>09:00–14:00</strong></li><li><span>Zondag</span><strong>Gesloten</strong></li></ul></div></div></div>
+  <section class="mb-4"><div class="section-heading"><span class="eyebrow">Locatie</span><h2>Bezoek ons in Paramaribo</h2></div><iframe class="map-frame" src="https://www.google.com/maps?q=Paramaribo%20Suriname&output=embed" title="Google Maps locatie van The Car Deal-oog in Paramaribo" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></section>
+  <section class="form-panel"><div class="section-heading"><span class="eyebrow">Contactformulier</span><h2>Stel uw vraag</h2><p>Uw bericht wordt gecontroleerd, opgeslagen en direct bevestigd.</p></div><form class="needs-validation" data-contact-form novalidate><div class="row g-3"><div class="col-md-6"><label class="form-label" for="contactName">Naam *</label><input class="form-control" id="contactName" name="name" required></div><div class="col-md-6"><label class="form-label" for="contactEmail">E-mailadres *</label><input class="form-control" id="contactEmail" name="email" type="email" required></div><div class="col-md-6"><label class="form-label" for="contactPhone">Telefoon</label><input class="form-control" id="contactPhone" name="phone" type="tel"></div><div class="col-md-6"><label class="form-label" for="contactSubject">Onderwerp *</label><select class="form-select" id="contactSubject" name="subject" required><option value="">Kies…</option><option>Algemene vraag</option><option>Proefrit</option><option>Klantenservice</option><option>Samenwerking</option></select></div><div class="col-12"><label class="form-label" for="contactMessage">Bericht *</label><textarea class="form-control" id="contactMessage" name="message" required></textarea></div><div class="col-12"><div class="form-check"><input class="form-check-input" id="contactConsent" name="consent" type="checkbox" required><label class="form-check-label" for="contactConsent">Ik ga akkoord met verwerking van mijn gegevens. *</label></div></div><div class="col-12"><button class="btn btn-tcd" type="submit">Bericht verzenden</button></div></div></form></section></div></div></div></main>
+  
+    <footer class="tcd-footer">
+      <div class="container position-relative">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <img class="footer-logo mb-3" src="../images/logo/the-car-deal-oog-logo-v2.png" alt="The Car Deal-oog">
+            <h2 class="h5">The Car Deal-oog</h2>
+            <p>Uw moderne showroom voor kopen, verkopen, huren, financieren en verzekeren.</p>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h3>Ontdek</h3>
+            <ul class="list-unstyled d-grid gap-2">
+              <li><a href="../templates/cars.html">Auto’s</a></li>
+              <li><a href="../templates/services.html">Diensten</a></li>
+              <li><a href="../templates/videos.html">Video’s</a></li>
+              <li><a href="../templates/game.html">Game</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h3>Account</h3>
+            <ul class="list-unstyled d-grid gap-2">
+              <li><a href="../templates/login.html">Inloggen</a></li>
+              <li><a href="../templates/register.html">Registreren</a></li>
+              <li><a href="../templates/account.html">Mijn Account</a></li>
+              <li data-staff-only hidden><a href="../templates/backoffice.html">Backoffice</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h3>Contact & adres</h3>
+            <address class="mb-2">Anamoestraat 18, Paramaribo, Suriname</address>
+            <p class="mb-1"><a href="tel:+5978882233">+597 888-2233</a></p>
+            <p><a href="mailto:info@cardeal-oog.com">info@cardeal-oog.com</a></p>
+            <p class="small mb-0">Ma–Vr 08:00–17:30 · Za 09:00–14:00</p>
+          </div>
+        </div>
+        <div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">
+          <span>© <span data-current-year></span> The Car Deal-oog. Alle rechten voorbehouden.</span>
+          <span>Privacy · Voorwaarden · Cookies</span>
+        </div>
+      </div>
+    </footer>
+  
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content border-0 rounded-4">
+          <div class="modal-header"><h2 class="modal-title h5" id="searchModalTitle">Zoek een auto</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sluiten"></button></div>
+          <div class="modal-body">
+            <form class="input-group mb-3" data-global-search-form>
+              <label class="visually-hidden" for="globalSearch">Zoekterm</label>
+              <input class="form-control" id="globalSearch" name="search" type="search" placeholder="Bijvoorbeeld elektrisch, Aether of blauw" autocomplete="off">
+              <button class="btn btn-tcd" type="submit">Zoeken</button>
+            </form>
+            <div class="d-grid gap-2" data-search-results><div class="empty-state py-3">Typ een merk, model, brandstof of kleur.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalTitle" aria-hidden="true" data-bs-backdrop="static">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 rounded-4 text-center">
+          <div class="modal-body p-4 p-md-5">
+            <div class="service-icon mx-auto fs-3" aria-hidden="true">✓</div>
+            <h2 class="h3" id="successModalTitle" data-success-title>Gelukt!</h2>
+            <p class="text-muted" data-success-message>Uw aanvraag is verwerkt.</p>
+            <button class="btn btn-tcd px-5" type="button" data-bs-dismiss="modal" data-success-ok>OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="toast-container position-fixed top-0 end-0 p-3 mt-5" data-toast-container></div>
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/cars.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>

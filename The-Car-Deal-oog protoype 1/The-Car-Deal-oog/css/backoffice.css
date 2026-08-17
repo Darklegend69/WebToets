@@ -1,0 +1,111 @@
+/* The Car Deal-oog V2 — Dashboard, tables, statuses, maps and video cards */
+.dashboard-tabs {
+  gap: 0.45rem;
+  padding: 0.5rem;
+  border: 1px solid var(--tcd-border);
+  border-radius: 1rem;
+  background: #fff;
+}
+
+.dashboard-tabs .nav-link {
+  border-radius: 0.7rem;
+  color: var(--tcd-muted);
+  font-weight: 750;
+}
+
+.dashboard-tabs .nav-link.active {
+  color: #fff;
+  background: var(--tcd-blue);
+}
+
+.dashboard-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.table-responsive {
+  border: 1px solid var(--tcd-border);
+  border-radius: 1rem;
+}
+
+.table {
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.table thead th {
+  padding-block: 0.95rem;
+  border-bottom: 0;
+  color: #fff;
+  background: var(--tcd-navy);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.table tbody td {
+  padding-block: 0.85rem;
+}
+
+.table-car-thumb {
+  width: 74px;
+  height: 48px;
+  object-fit: cover;
+  border: 2px solid #fff;
+  border-radius: 0.6rem;
+  box-shadow: 0 4px 12px rgba(6, 22, 47, 0.15);
+}
+
+.role-badge,
+.status-pill {
+  display: inline-block;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: var(--tcd-ice);
+  color: var(--tcd-blue);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.status-new { color: #0d63d6; background: #e8f2ff; }
+.status-processing { color: #a76300; background: #fff3db; }
+.status-completed { color: #147652; background: #e4f8f0; }
+.status-rejected { color: #b42c43; background: #ffe8ec; }
+
+.map-frame {
+  width: 100%;
+  min-height: 420px;
+  border: 3px solid #fff;
+  border-radius: 1.2rem;
+  box-shadow: var(--tcd-shadow);
+}
+
+.opening-list {
+  display: grid;
+  gap: 0.45rem;
+  padding: 0;
+  list-style: none;
+}
+
+.opening-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px dashed var(--tcd-border);
+}
+
+.video-card video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 3px solid #fff;
+  border-radius: 1rem;
+  background: #000;
+  box-shadow: 0 16px 50px rgba(6, 22, 47, 0.13);
+}
