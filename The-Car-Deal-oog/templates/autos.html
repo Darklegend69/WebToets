@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="nl" data-theme="dark">
+<head>
+  <!-- Student: ____________________ | Onderdeel: Autokaarten, filters en detailmodal -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bekijk en filter de auto's van The Car Deal-oog en vraag eenvoudig een offerte aan.">
+  <meta name="theme-color" content="#08090b">
+  <title>Auto's | The Car Deal-oog</title>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/shared.css">
+  <link rel="stylesheet" href="../css/autos.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="cars-body" data-page="cars">
+  <a class="skip-link" href="#carsMain">Ga direct naar de auto's</a>
+  <div class="loading-screen" data-loading-screen aria-hidden="true"><img class="loading-logo" src="../images/logo/the-car-deal-oog-logo-v2.png" alt=""></div>
+
+  <nav class="navbar navbar-dark navbar-expand-lg sticky-top site-navbar" aria-label="Hoofdnavigatie">
+    <div class="container">
+      <a class="navbar-brand brand-link" href="../Index.html"><img src="../images/logo/the-car-deal-oog-logo-v2.png" alt="The Car Deal-oog"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#carsMenu" aria-controls="carsMenu" aria-expanded="false" aria-label="Menu openen"><span class="navbar-toggler-icon"></span></button>
+
+      <div class="collapse navbar-collapse" id="carsMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../Index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="cars" href="autos.html">Auto's</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Diensten</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="diensten.html">Alle diensten</a></li>
+              <li><a class="dropdown-item" href="diensten.html#sell">Verkopen</a></li>
+              <li><a class="dropdown-item" href="diensten.html#buy">Inkopen</a></li>
+              <li><a class="dropdown-item" href="diensten.html#rent">Huren</a></li>
+              <li><a class="dropdown-item" href="diensten.html#finance">Financiering</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="over-ons.html">Over ons</a></li>
+          <li class="nav-item"><a class="nav-link" href="videos.html">Video's</a></li>
+          <li class="nav-item"><a class="nav-link" href="game.html">Game</a></li>
+          <li class="nav-item"><a class="nav-link" href="mijnaccount.html#account"><span data-auth-name>Mijn account</span></a></li>
+          <li class="nav-item" data-staff-only hidden><a class="nav-link" href="../Index.html#backoffice">Backoffice</a></li>
+        </ul>
+        <form class="d-flex nav-search ms-lg-2" action="autos.html" method="get" role="search">
+          <input class="form-control form-control-sm" name="q" type="search" placeholder="Zoeken" aria-label="Zoek auto">
+          <button class="btn btn-sm btn-brand" type="submit">⌕</button>
+        </form>
+        <button class="theme-switch ms-lg-2 mt-2 mt-lg-0" type="button" data-theme-toggle><span class="theme-track"><span class="theme-thumb"></span></span><span class="theme-text" data-theme-text>Donker</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-title-block">
+    <div class="container page-enter">
+      <span class="small-label">Onze collectie</span>
+      <h1>Vind een auto die bij u past</h1>
+      <p>Gebruik de eenvoudige filters, bekijk alle specificaties en verstuur daarna een offerteaanvraag.</p>
+    </div>
+  </header>
+
+  <main class="container py-5" id="carsMain">
+    <div class="row g-4">
+      <aside class="col-lg-3">
+        <div class="side-menu">
+          <h2>Externe autolinks</h2>
+          <ul>
+            <li><a href="https://www.google.com/maps" target="_blank" rel="noopener">Google Maps</a></li>
+            <li><a href="https://www.michelin.com" target="_blank" rel="noopener">Michelin</a></li>
+            <li><a href="https://www.nhtsa.gov/vehicle-safety" target="_blank" rel="noopener">Vehicle Safety</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <section class="col-lg-9" aria-labelledby="catalogTitle">
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-3">
+          <div><span class="small-label">Showroom</span><h2 id="catalogTitle" class="mb-0">Beschikbare auto's</h2></div>
+          <span class="status-badge" data-car-count>0 resultaten</span>
+        </div>
+
+        <form class="cars-filter-box" data-car-filter>
+          <div class="row g-3">
+            <div class="col-md-6"><label class="form-label" for="filterQuery">Merk, model of kleur</label><input class="form-control" id="filterQuery" name="query" type="search" placeholder="Bijvoorbeeld Aether"></div>
+            <div class="col-md-3"><label class="form-label" for="filterFuel">Brandstof</label><select class="form-select" id="filterFuel" name="fuel"><option value="">Alles</option><option>Benzine</option><option>Diesel</option><option>Hybride</option><option>Elektrisch</option></select></div>
+            <div class="col-md-3"><label class="form-label" for="filterStatus">Status</label><select class="form-select" id="filterStatus" name="availability"><option value="">Alles</option><option>Beschikbaar</option><option>Gereserveerd</option><option>Verkocht</option></select></div>
+            <div class="col-md-6"><label class="form-label" for="filterPrice">Maximale prijs USD</label><input class="form-control" id="filterPrice" name="maxPrice" type="number" min="0" placeholder="Bijvoorbeeld 50000"></div>
+            <div class="col-md-4"><label class="form-label" for="filterSort">Sorteren</label><select class="form-select" id="filterSort" name="sort"><option value="newest">Nieuwste eerst</option><option value="price-asc">Prijs laag-hoog</option><option value="price-desc">Prijs hoog-laag</option><option value="mileage">Laagste kilometerstand</option></select></div>
+            <div class="col-md-2 d-grid align-items-end"><button class="btn btn-outline-brand" type="button" data-reset-filter>Wissen</button></div>
+          </div>
+        </form>
+
+        <div class="row g-4" data-cars-grid></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-3 align-items-start">
+        <div class="col-md-4"><h2 class="h5">The Car Deal-oog</h2><p class="mb-0">Anamoestraat 18, Paramaribo, Suriname</p></div>
+        <div class="col-md-4"><h3>Contact</h3><p class="mb-0"><a href="tel:+5978882233">+597 888-2233</a><br><a href="mailto:info@cardeal-oog.com">info@cardeal-oog.com</a></p></div>
+        <div class="col-md-4"><h3>Account</h3><a href="mijnaccount.html#account">Mijn account</a><br><a data-staff-only hidden href="../Index.html#backoffice">Backoffice</a><br><a href="mijnaccount.html#login">Inloggen</a></div>
+      </div>
+      <div class="footer-line">© <span data-current-year></span> The Car Deal-oog</div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="carDetailModal" tabindex="-1" aria-labelledby="carDetailTitle" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header"><h2 class="modal-title h5" id="carDetailTitle">Autodetails</h2><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Sluiten"></button></div>
+        <div class="modal-body" data-car-detail></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="offerModal" tabindex="-1" aria-labelledby="offerTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header"><h2 class="modal-title h5" id="offerTitle">Offerte aanvragen</h2><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Sluiten"></button></div>
+        <form class="needs-validation" data-offer-form novalidate>
+          <div class="modal-body">
+            <input name="carId" type="hidden">
+            <div class="alert alert-secondary" data-offer-summary>Kies eerst een auto.</div>
+            <div class="row g-3">
+              <div class="col-md-6"><label class="form-label" for="offerName">Volledige naam *</label><input class="form-control" id="offerName" name="name" required autocomplete="name"></div>
+              <div class="col-md-6"><label class="form-label" for="offerEmail">E-mailadres *</label><input class="form-control" id="offerEmail" name="email" type="email" required autocomplete="email"></div>
+              <div class="col-md-6"><label class="form-label" for="offerPhone">Telefoonnummer *</label><input class="form-control" id="offerPhone" name="phone" type="tel" required autocomplete="tel"></div>
+              <div class="col-md-6"><label class="form-label" for="offerContact">Voorkeur contact</label><select class="form-select" id="offerContact" name="preferredContact"><option>Telefoon</option><option>E-mail</option><option>WhatsApp</option></select></div>
+              <div class="col-6"><div class="form-check"><input class="form-check-input" id="offerTrade" name="tradeIn" type="checkbox"><label class="form-check-label" for="offerTrade">Ik wil inruilen</label></div></div>
+              <div class="col-6"><div class="form-check"><input class="form-check-input" id="offerFinance" name="financing" type="checkbox"><label class="form-check-label" for="offerFinance">Financiering gewenst</label></div></div>
+              <div class="col-12"><label class="form-label" for="offerMessage">Opmerking</label><textarea class="form-control" id="offerMessage" name="message" rows="3"></textarea></div>
+              <div class="col-12"><div class="form-check"><input class="form-check-input" id="offerConsent" name="consent" type="checkbox" required><label class="form-check-label" for="offerConsent">Ik ga akkoord met de verwerking van mijn gegevens. *</label></div></div>
+            </div>
+          </div>
+          <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Annuleren</button><button class="btn btn-brand" type="submit">Offerte versturen</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successTitle" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content text-center"><div class="modal-body p-5"><div class="success-mark">✓</div><h2 class="h4" id="successTitle" data-success-title>Gelukt</h2><p class="text-soft" data-success-message></p><button class="btn btn-brand" type="button" data-bs-dismiss="modal" data-success-ok>OK</button></div></div></div>
+  </div>
+  <div class="toast-container position-fixed top-0 end-0 p-3 mt-5" data-toast-container></div>
+
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/commerce.js"></script>
+</body>
+</html>

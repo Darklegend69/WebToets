@@ -1,0 +1,80 @@
+/* Eigen basisstijl voor templates/mijnaccount.html. */
+
+.account-body .account-header {
+  background: linear-gradient(130deg, var(--page-bg), var(--card-soft));
+  border-bottom: 1px solid var(--line);
+}
+
+.account-body .account-intro {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+.account-body .account-intro p {
+  max-width: 620px;
+  color: var(--text-soft);
+}
+
+.account-body .account-menu-box,
+.account-body .account-shell {
+  padding: 22px;
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.account-body .account-shell {
+  animation: accountSlide 0.5s ease both;
+}
+
+.account-body .account-tabs {
+  display: grid;
+  gap: 7px;
+}
+
+.account-body .account-tabs .nav-link {
+  color: var(--text-soft);
+  text-align: left;
+  border: 1px solid transparent;
+}
+
+.account-body .account-tabs .nav-link:hover {
+  color: var(--accent);
+  border-color: var(--line);
+}
+
+.account-body .account-tabs .nav-link.active {
+  color: #fff;
+  background: var(--accent);
+}
+
+.account-body .table {
+  color: var(--text-main);
+}
+
+@keyframes accountSlide {
+  from { opacity: 0; transform: translateX(24px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@media (max-width: 991.98px) {
+  .account-body .account-tabs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .account-body .account-tabs .nav-link {
+    text-align: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .account-body .account-tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .account-body .account-intro {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+}

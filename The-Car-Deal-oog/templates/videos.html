@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="nl" data-theme="dark">
+<head>
+  <!-- Student: ____________________ | Onderdeel: Video's met figure en figcaption -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bekijk de promotie- en informatievideo's van The Car Deal-oog.">
+  <meta name="theme-color" content="#08090b">
+  <title>Mijn video's | The Car Deal-oog</title>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/shared.css">
+  <link rel="stylesheet" href="../css/videos.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="videos-body" data-page="videos">
+  <div class="loading-screen" data-loading-screen aria-hidden="true"><img class="loading-logo" src="../images/logo/the-car-deal-oog-logo-v2.png" alt=""></div>
+
+  <nav class="navbar navbar-dark navbar-expand-xl sticky-top site-navbar" aria-label="Hoofdnavigatie">
+    <div class="container-fluid">
+      <a class="navbar-brand brand-link" href="../Index.html"><img src="../images/logo/the-car-deal-oog-logo-v2.png" alt="The Car Deal-oog"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#videoMenu" aria-controls="videoMenu" aria-expanded="false" aria-label="Menu openen"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="videoMenu">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="../Index.html">Home</a>
+          <a class="nav-link" href="autos.html">Auto's</a>
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Diensten</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="diensten.html">Alle diensten</a>
+              <a class="dropdown-item" href="diensten.html#sell">Verkopen</a>
+              <a class="dropdown-item" href="diensten.html#buy">Inkopen</a>
+              <a class="dropdown-item" href="diensten.html#rent">Huren</a>
+              <a class="dropdown-item" href="diensten.html#finance">Financiering</a>
+            </div>
+          </div>
+          <a class="nav-link" href="over-ons.html">Over ons</a>
+          <a class="nav-link active" href="videos.html">Video's</a>
+          <a class="nav-link" href="game.html">Game</a>
+          <a class="nav-link" href="mijnaccount.html#account"><span data-auth-name>Mijn account</span></a>
+          <a class="nav-link" data-staff-only hidden href="../Index.html#backoffice">Backoffice</a>
+        </div>
+        <form class="d-flex nav-search ms-xl-2" action="autos.html" method="get"><input class="form-control form-control-sm" name="q" type="search" placeholder="Zoeken" aria-label="Zoeken"><button class="btn btn-brand btn-sm" type="submit">⌕</button></form>
+        <button class="theme-switch ms-xl-2 mt-2 mt-xl-0" type="button" data-theme-toggle><span class="theme-track"><span class="theme-thumb"></span></span><span class="theme-text" data-theme-text>Donker</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="page-title-block text-center">
+      <div class="container page-enter">
+        <span class="small-label">Lokale MP4-bestanden</span>
+        <h1>Mijn video's</h1>
+        <p class="mx-auto">Twee werkende video's over onze showroom en het kiezen van een voertuig.</p>
+      </div>
+    </header>
+
+    <div class="container py-5">
+      <div class="row g-4">
+        <section class="col-lg-9 order-lg-1" aria-labelledby="videoListTitle">
+          <h2 class="visually-hidden" id="videoListTitle">Videolijst</h2>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <figure class="video-box h-100">
+                <video controls preload="metadata" poster="../images/cars/car-aurora.png">
+                  <source src="../videos/promotional-video.mp4" type="video/mp4">
+                  Uw browser ondersteunt deze video niet.
+                </video>
+                <figcaption class="video-description"><h2 class="h4">The Car Deal-oog promotievideo</h2><p class="text-soft mb-0">Een korte kennismaking met de showroom, auto's en diensten.</p></figcaption>
+              </figure>
+            </div>
+            <div class="col-md-6">
+              <figure class="video-box h-100">
+                <video controls preload="metadata" poster="../images/cars/car-titan.png">
+                  <source src="../videos/vehicle-selection-guide.mp4" type="video/mp4">
+                  Uw browser ondersteunt deze video niet.
+                </video>
+                <figcaption class="video-description"><h2 class="h4">Een auto kiezen</h2><p class="text-soft mb-0">Een eenvoudige video over het vergelijken van voertuigwensen.</p></figcaption>
+              </figure>
+            </div>
+          </div>
+
+        </section>
+
+        <aside class="col-lg-3 order-lg-2">
+          <div class="side-menu">
+            <h2>Externe links</h2>
+            <ul>
+              <li><a href="https://www.google.com/maps" target="_blank" rel="noopener">Google Maps</a></li>
+              <li><a href="https://www.michelin.com" target="_blank" rel="noopener">Michelin</a></li>
+              <li><a href="https://www.nhtsa.gov/vehicle-safety" target="_blank" rel="noopener">Vehicle Safety</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer text-center">
+    <div class="container">
+      <h2 class="h5">The Car Deal-oog</h2>
+      <p class="mb-1">Anamoestraat 18, Paramaribo, Suriname</p>
+      <p><a href="tel:+5978882233">+597 888-2233</a> · <a href="mailto:info@cardeal-oog.com">info@cardeal-oog.com</a></p>
+      <p><a href="mijnaccount.html#account">Mijn account</a> <span data-staff-only hidden>· <a href="../Index.html#backoffice">Backoffice</a></span></p>
+      <div class="footer-line">© <span data-current-year></span> The Car Deal-oog</div>
+    </div>
+  </footer>
+
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

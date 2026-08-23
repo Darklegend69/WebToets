@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="nl" data-theme="dark">
+<head>
+  <!-- Student: ____________________ | Onderdeel: Login, registratie en Mijn Account -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Log in, registreer of bekijk uw account bij The Car Deal-oog.">
+  <meta name="theme-color" content="#08090b">
+  <title>Mijn account | The Car Deal-oog</title>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/shared.css">
+  <link rel="stylesheet" href="../css/mijnaccount.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="account-body" data-page="account">
+  <div class="loading-screen" data-loading-screen aria-hidden="true">
+    <img class="loading-logo" src="../images/logo/the-car-deal-oog-logo-v2.png" alt="">
+  </div>
+
+  <header class="account-header">
+    <nav class="navbar navbar-dark navbar-expand-xl site-navbar" aria-label="Hoofdnavigatie">
+      <div class="container-fluid px-lg-4">
+        <a class="navbar-brand brand-link" href="../Index.html">
+          <img src="../images/logo/the-car-deal-oog-logo-v2.png" alt="Logo van The Car Deal-oog">
+        </a>
+
+        <div class="d-flex gap-2 order-xl-3">
+          <button class="theme-switch" type="button" data-theme-toggle>
+            <span class="theme-track"><span class="theme-thumb"></span></span>
+            <span class="theme-text" data-theme-text>Donker</span>
+          </button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#accountMenu" aria-controls="accountMenu" aria-expanded="false" aria-label="Menu openen">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse order-xl-2" id="accountMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="../Index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="autos.html">Auto's</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Diensten</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="diensten.html">Alle diensten</a></li>
+                <li><a class="dropdown-item" href="diensten.html#sell">Auto verkopen</a></li>
+                <li><a class="dropdown-item" href="diensten.html#buy">Auto inkopen</a></li>
+                <li><a class="dropdown-item" href="diensten.html#rent">Auto huren</a></li>
+                <li><a class="dropdown-item" href="diensten.html#finance">Financiering</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="over-ons.html">Over ons</a></li>
+            <li class="nav-item"><a class="nav-link" href="videos.html">Video's</a></li>
+            <li class="nav-item"><a class="nav-link" href="game.html">Game</a></li>
+            <li class="nav-item"><a class="nav-link active" href="mijnaccount.html#account"><span data-auth-name>Mijn account</span></a></li>
+            <li class="nav-item" data-staff-only hidden><a class="nav-link" href="../Index.html#backoffice">Backoffice</a></li>
+            <li class="nav-item" data-logout-button hidden><button class="btn btn-sm btn-outline-danger ms-xl-1" type="button">Uitloggen</button></li>
+          </ul>
+
+          <form class="d-flex nav-search ms-xl-2" action="autos.html" method="get" role="search">
+            <input class="form-control form-control-sm" name="q" type="search" placeholder="Zoeken" aria-label="Zoek een auto">
+            <button class="btn btn-brand btn-sm" type="submit" aria-label="Start zoeken">⌕</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container account-intro page-enter">
+      <span class="small-label">Persoonlijke omgeving</span>
+      <h1>Mijn account</h1>
+      <p>Log in, maak een klantaccount of bekijk uw opgeslagen aanvragen.</p>
+    </div>
+  </header>
+
+  <main class="container py-5" data-account-page>
+    <div class="row g-4">
+      <aside class="col-lg-3">
+        <div class="account-menu-box">
+          <h2 class="h5">Accountmenu</h2>
+          <div class="nav nav-pills account-tabs" role="tablist" aria-orientation="vertical">
+            <button class="nav-link active" id="loginTab" data-bs-toggle="pill" data-bs-target="#loginPane" type="button">Inloggen</button>
+            <button class="nav-link" id="registerTab" data-bs-toggle="pill" data-bs-target="#registerPane" type="button">Registreren</button>
+            <button class="nav-link" id="accountTab" data-bs-toggle="pill" data-bs-target="#accountPane" type="button">Mijn gegevens</button>
+          </div>
+        </div>
+
+        <div class="side-menu mt-3">
+          <h2>Externe links</h2>
+          <ul>
+            <li><a href="https://www.google.com/maps" target="_blank" rel="noopener">Google Maps</a></li>
+            <li><a href="https://www.michelin.com" target="_blank" rel="noopener">Michelin</a></li>
+            <li><a href="https://www.nhtsa.gov/vehicle-safety" target="_blank" rel="noopener">Vehicle Safety</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <section class="col-lg-9" aria-label="Accountformulieren">
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="loginPane" aria-labelledby="loginTab">
+            <form class="account-shell needs-validation" data-login-form novalidate>
+              <h2 class="h3">Welkom terug</h2>
+              <p class="text-soft">Gebruik uw e-mailadres of gebruikersnaam om in te loggen.</p>
+              <div class="mb-3">
+                <label class="form-label" for="loginIdentifier">E-mail of gebruikersnaam</label>
+                <input class="form-control" id="loginIdentifier" name="identifier" required autocomplete="username">
+                <div class="invalid-feedback">Vul uw e-mail of gebruikersnaam in.</div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="loginPassword">Wachtwoord</label>
+                <input class="form-control" id="loginPassword" name="password" type="password" required autocomplete="current-password">
+                <div class="invalid-feedback">Vul uw wachtwoord in.</div>
+              </div>
+              <button class="btn btn-brand" type="submit">Inloggen</button>
+              <div class="mt-3" data-login-feedback hidden></div>
+            </form>
+          </div>
+
+          <div class="tab-pane fade" id="registerPane" aria-labelledby="registerTab">
+            <form class="account-shell needs-validation" data-register-form novalidate>
+              <h2 class="h3">Nieuw klantaccount</h2>
+              <div class="row g-3">
+                <div class="col-md-6"><label class="form-label" for="registerName">Volledige naam</label><input class="form-control" id="registerName" name="name" required autocomplete="name"></div>
+                <div class="col-md-6"><label class="form-label" for="registerUsername">Gebruikersnaam</label><input class="form-control" id="registerUsername" name="username" required autocomplete="username"></div>
+                <div class="col-md-6"><label class="form-label" for="registerEmail">E-mailadres</label><input class="form-control" id="registerEmail" name="email" type="email" required autocomplete="email"></div>
+                <div class="col-md-6"><label class="form-label" for="registerPhone">Telefoonnummer</label><input class="form-control" id="registerPhone" name="phone" type="tel" required autocomplete="tel"></div>
+                <div class="col-md-6"><label class="form-label" for="registerPassword">Wachtwoord</label><input class="form-control" id="registerPassword" name="password" type="password" minlength="6" required autocomplete="new-password"></div>
+                <div class="col-md-6"><label class="form-label" for="registerConfirm">Herhaal wachtwoord</label><input class="form-control" id="registerConfirm" name="confirmPassword" type="password" minlength="6" required autocomplete="new-password"></div>
+              </div>
+              <div class="form-check mt-3">
+                <input class="form-check-input" id="registerConsent" name="consent" type="checkbox" required>
+                <label class="form-check-label" for="registerConsent">Ik ga akkoord met de verwerking van mijn gegevens.</label>
+              </div>
+              <button class="btn btn-brand mt-3" type="submit">Account aanmaken</button>
+            </form>
+          </div>
+
+          <div class="tab-pane fade" id="accountPane" aria-labelledby="accountTab">
+            <div data-account-content></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-3 align-items-start">
+        <div class="col-md-4"><h2 class="h5">The Car Deal-oog</h2><p>Uw betrouwbare autowebshop.</p></div>
+        <div class="col-md-4"><h3>Contact</h3><address>Anamoestraat 18, Paramaribo</address><a href="tel:+5978882233">+597 888-2233</a><br><a href="mailto:info@cardeal-oog.com">info@cardeal-oog.com</a></div>
+        <div class="col-md-4"><h3>Account</h3><a href="#login" data-open-login>Inloggen</a><br><a href="#register" data-open-register>Registreren</a><br><span data-staff-only hidden><a href="../Index.html#backoffice">Backoffice</a><br></span><a href="#" data-logout-button hidden>Uitloggen</a></div>
+      </div>
+      <div class="footer-line">© <span data-current-year></span> The Car Deal-oog</div>
+    </div>
+  </footer>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" data-toast-container></div>
+
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

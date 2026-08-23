@@ -1,0 +1,70 @@
+/* Basisstijl voor templates/over-ons.html. */
+
+.about-body .about-moving-text {
+  display: inline-block;
+  color: var(--accent);
+  font-weight: bold;
+  animation: aboutMove 5s ease-in-out infinite alternate;
+}
+
+.about-body .about-photo {
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  border-radius: 12px;
+  animation: aboutPhotoIn 0.7s ease both;
+}
+
+.about-body .mission-box,
+.about-body .vision-box {
+  height: 100%;
+  padding: 22px;
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--accent);
+  border-radius: 12px;
+  animation: aboutBoxIn 0.65s ease both;
+  transition: transform 0.2s ease;
+}
+
+.about-body .vision-box { animation-delay: 0.15s; }
+
+.about-body .mission-box:hover,
+.about-body .vision-box:hover {
+  transform: translateY(-5px);
+}
+
+.about-body .opening-table td {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.about-body .map-frame {
+  width: 100%;
+  min-height: 330px;
+  border: 3px solid var(--accent);
+  border-radius: 12px;
+}
+
+.about-body .contact-box {
+  padding: 24px;
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+@keyframes aboutMove {
+  from { transform: translateX(0); }
+  to { transform: translateX(28px); }
+}
+
+@keyframes aboutPhotoIn {
+  from { opacity: 0; transform: translateX(-25px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes aboutBoxIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

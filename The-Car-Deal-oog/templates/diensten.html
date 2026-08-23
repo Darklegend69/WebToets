@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="nl" data-theme="dark">
+<head>
+  <!-- Student: ____________________ | Onderdeel: Diensten, accordion en formulieren -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Vraag auto verkopen, auto inkopen, autohuur of financiering en verzekering aan.">
+  <meta name="theme-color" content="#08090b">
+  <title>Diensten | The Car Deal-oog</title>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/shared.css">
+  <link rel="stylesheet" href="../css/diensten.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="services-body" data-page="services">
+  <div class="loading-screen" data-loading-screen aria-hidden="true"><img class="loading-logo" src="../images/logo/the-car-deal-oog-logo-v2.png" alt=""></div>
+
+  <header>
+    <nav class="navbar navbar-dark navbar-expand-lg site-navbar" aria-label="Hoofdnavigatie">
+      <div class="container-fluid px-lg-4">
+        <a class="navbar-brand brand-link" href="../Index.html"><img src="../images/logo/the-car-deal-oog-logo-v2.png" alt="The Car Deal-oog"></a>
+        <div class="d-flex gap-2">
+          <button class="theme-switch" type="button" data-theme-toggle><span class="theme-track"><span class="theme-thumb"></span></span><span class="theme-text" data-theme-text>Donker</span></button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#serviceNavigation" aria-controls="serviceNavigation" aria-expanded="false" aria-label="Menu openen"><span class="navbar-toggler-icon"></span></button>
+        </div>
+        <div class="collapse navbar-collapse" id="serviceNavigation">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="../Index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="autos.html">Auto's</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">Diensten</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#sell">Auto verkopen</a></li>
+                <li><a class="dropdown-item" href="#buy">Auto inkopen</a></li>
+                <li><a class="dropdown-item" href="#rent">Auto huren</a></li>
+                <li><a class="dropdown-item" href="#finance">Financiering & verzekering</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="over-ons.html">Over ons</a></li>
+            <li class="nav-item"><a class="nav-link" href="videos.html">Video's</a></li>
+            <li class="nav-item"><a class="nav-link" href="game.html">Game</a></li>
+            <li class="nav-item"><a class="nav-link" href="mijnaccount.html#account"><span data-auth-name>Mijn account</span></a></li>
+            <li class="nav-item" data-staff-only hidden><a class="nav-link" href="../Index.html#backoffice">Backoffice</a></li>
+          </ul>
+          <form class="d-flex nav-search ms-lg-2" action="autos.html" method="get"><input class="form-control form-control-sm" name="q" type="search" placeholder="Zoeken" aria-label="Zoeken"><button class="btn btn-brand btn-sm" type="submit">⌕</button></form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="page-title-block">
+      <div class="container page-enter">
+        <span class="small-label">Vier formulieren, één pagina</span>
+        <h1>Onze diensten</h1>
+        <p>Klik op een dienst. Ieder formulier wordt apart gevalideerd en daarna in de backoffice opgeslagen.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container py-5">
+    <div class="row g-4">
+      <div class="col-lg-3">
+        <aside class="side-menu">
+          <h2>Externe links</h2>
+          <ul>
+            <li><a href="https://www.google.com/maps" target="_blank" rel="noopener">Google Maps</a></li>
+            <li><a href="https://www.michelin.com" target="_blank" rel="noopener">Michelin</a></li>
+            <li><a href="https://www.nhtsa.gov/vehicle-safety" target="_blank" rel="noopener">Vehicle Safety</a></li>
+          </ul>
+        </aside>
+        <div class="service-intro-list mt-3">
+          <h2 class="h6">Zo werkt het</h2>
+          <ol class="mb-0 ps-3">
+            <li>Kies een dienst.</li>
+            <li>Vul het formulier in.</li>
+            <li>Klik op verzenden.</li>
+            <li>Ontvang een succesmelding.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="col-lg-9">
+        <div class="accordion" id="serviceAccordion">
+          <article class="accordion-item" id="sell">
+            <h2 class="accordion-header" id="sellHeading"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sellForm"><span class="service-step">1</span>Auto verkopen</button></h2>
+            <div class="accordion-collapse collapse show" id="sellForm" data-bs-parent="#serviceAccordion">
+              <div class="accordion-body">
+                <form class="needs-validation" data-service-form="sell" novalidate>
+                  <div class="row g-3">
+                    <div class="col-md-6"><label class="form-label" for="sellName">Naam *</label><input class="form-control" id="sellName" name="name" required></div>
+                    <div class="col-md-6"><label class="form-label" for="sellEmail">E-mail *</label><input class="form-control" id="sellEmail" name="email" type="email" required></div>
+                    <div class="col-md-6"><label class="form-label" for="sellPhone">Telefoon *</label><input class="form-control" id="sellPhone" name="phone" type="tel" required></div>
+                    <div class="col-md-3"><label class="form-label" for="sellBrand">Merk *</label><input class="form-control" id="sellBrand" name="brand" required></div>
+                    <div class="col-md-3"><label class="form-label" for="sellModel">Model *</label><input class="form-control" id="sellModel" name="model" required></div>
+                    <div class="col-md-4"><label class="form-label" for="sellYear">Bouwjaar *</label><input class="form-control" id="sellYear" name="year" type="number" min="1990" max="2035" required></div>
+                    <div class="col-md-4"><label class="form-label" for="sellMileage">Kilometerstand *</label><input class="form-control" id="sellMileage" name="mileage" type="number" min="0" required></div>
+                    <div class="col-md-4"><label class="form-label" for="sellCondition">Staat *</label><select class="form-select" id="sellCondition" name="condition" required><option value="">Kies</option><option>Goed</option><option>Redelijk</option><option>Schade</option></select></div>
+                    <div class="col-12"><label class="form-label" for="sellNotes">Extra informatie</label><textarea class="form-control" id="sellNotes" name="notes"></textarea></div>
+                    <div class="col-12"><div class="form-check"><input class="form-check-input" id="sellConsent" name="consent" type="checkbox" required><label class="form-check-label" for="sellConsent">Ik ga akkoord met gegevensverwerking. *</label></div></div>
+                  </div>
+                  <button class="btn btn-brand mt-3" type="submit">Verkoopaanvraag verzenden</button>
+                </form>
+              </div>
+            </div>
+          </article>
+
+          <article class="accordion-item" id="buy">
+            <h2 class="accordion-header" id="buyHeading"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#buyForm"><span class="service-step">2</span>Auto inkopen</button></h2>
+            <div class="accordion-collapse collapse" id="buyForm" data-bs-parent="#serviceAccordion">
+              <div class="accordion-body">
+                <form class="needs-validation" data-service-form="buy" novalidate>
+                  <fieldset>
+                    <legend class="h5">Contact en zoekopdracht</legend>
+                    <div class="row g-3">
+                      <div class="col-md-4"><label class="form-label" for="buyName">Naam *</label><input class="form-control" id="buyName" name="name" required></div>
+                      <div class="col-md-4"><label class="form-label" for="buyEmail">E-mail *</label><input class="form-control" id="buyEmail" name="email" type="email" required></div>
+                      <div class="col-md-4"><label class="form-label" for="buyPhone">Telefoon *</label><input class="form-control" id="buyPhone" name="phone" type="tel" required></div>
+                      <div class="col-md-6"><label class="form-label" for="buyBudget">Maximaal budget USD *</label><input class="form-control" id="buyBudget" name="budget" type="number" min="1000" required></div>
+                      <div class="col-md-6"><label class="form-label" for="buyBody">Carrosserietype *</label><select class="form-select" id="buyBody" name="bodyType" required><option value="">Kies</option><option>Sedan</option><option>SUV</option><option>Hatchback</option><option>Pickup</option></select></div>
+                      <div class="col-md-6"><label class="form-label" for="buyFuel">Brandstof</label><select class="form-select" id="buyFuel" name="fuel"><option>Geen voorkeur</option><option>Benzine</option><option>Hybride</option><option>Elektrisch</option></select></div>
+                      <div class="col-md-6"><label class="form-label" for="buyTransmission">Transmissie</label><select class="form-select" id="buyTransmission" name="transmission"><option>Geen voorkeur</option><option>Automaat</option><option>Handgeschakeld</option></select></div>
+                      <div class="col-12"><label class="form-label" for="buyNotes">Merken of wensen</label><textarea class="form-control" id="buyNotes" name="notes"></textarea></div>
+                      <div class="col-12"><div class="form-check"><input class="form-check-input" id="buyConsent" name="consent" type="checkbox" required><label class="form-check-label" for="buyConsent">Ik ga akkoord met gegevensverwerking. *</label></div></div>
+                    </div>
+                  </fieldset>
+                  <button class="btn btn-brand mt-3" type="submit">Inkoopaanvraag verzenden</button>
+                </form>
+              </div>
+            </div>
+          </article>
+
+          <article class="accordion-item" id="rent">
+            <h2 class="accordion-header" id="rentHeading"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rentForm"><span class="service-step">3</span>Auto huren</button></h2>
+            <div class="accordion-collapse collapse" id="rentForm" data-bs-parent="#serviceAccordion">
+              <div class="accordion-body">
+                <form class="needs-validation" data-service-form="rent" novalidate>
+                  <div class="mb-3"><label class="form-label" for="rentName">Volledige naam *</label><input class="form-control" id="rentName" name="name" required></div>
+                  <div class="row g-3">
+                    <div class="col-md-6"><label class="form-label" for="rentEmail">E-mail *</label><input class="form-control" id="rentEmail" name="email" type="email" required></div>
+                    <div class="col-md-6"><label class="form-label" for="rentPhone">Telefoon *</label><input class="form-control" id="rentPhone" name="phone" type="tel" required></div>
+                    <div class="col-md-4"><label class="form-label" for="rentType">Autotype *</label><select class="form-select" id="rentType" name="carType" required><option value="">Kies</option><option>Compact</option><option>Sedan</option><option>SUV</option><option>Pickup</option></select></div>
+                    <div class="col-md-4"><label class="form-label" for="rentStart">Startdatum *</label><input class="form-control" id="rentStart" name="startDate" type="date" required></div>
+                    <div class="col-md-4"><label class="form-label" for="rentEnd">Einddatum *</label><input class="form-control" id="rentEnd" name="endDate" type="date" required></div>
+                    <div class="col-12"><label class="form-label" for="rentNotes">Opmerking</label><textarea class="form-control" id="rentNotes" name="notes"></textarea></div>
+                    <div class="col-12"><div class="form-check"><input class="form-check-input" id="rentConsent" name="consent" type="checkbox" required><label class="form-check-label" for="rentConsent">Ik ga akkoord met gegevensverwerking. *</label></div></div>
+                  </div>
+                  <button class="btn btn-brand mt-3" type="submit">Huuraanvraag verzenden</button>
+                </form>
+              </div>
+            </div>
+          </article>
+
+          <article class="accordion-item" id="finance">
+            <h2 class="accordion-header" id="financeHeading"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#financeForm"><span class="service-step">4</span>Financiering & verzekering</button></h2>
+            <div class="accordion-collapse collapse" id="financeForm" data-bs-parent="#serviceAccordion">
+              <div class="accordion-body">
+                <form class="needs-validation" data-service-form="finance" novalidate>
+                  <div class="row g-3">
+                    <div class="col-md-6"><label class="form-label" for="financeName">Naam *</label><input class="form-control" id="financeName" name="name" required></div>
+                    <div class="col-md-6"><label class="form-label" for="financeEmail">E-mail *</label><input class="form-control" id="financeEmail" name="email" type="email" required></div>
+                    <div class="col-md-6"><label class="form-label" for="financePhone">Telefoon *</label><input class="form-control" id="financePhone" name="phone" type="tel" required></div>
+                    <div class="col-md-6"><label class="form-label" for="financeType">Aanvraagtype *</label><select class="form-select" id="financeType" name="requestType" required><option value="">Kies</option><option>Financiering</option><option>Verzekering</option><option>Beide</option></select></div>
+                    <div class="col-md-6"><label class="form-label" for="financeAmount">Gewenst bedrag USD *</label><input class="form-control" id="financeAmount" name="requestedAmount" type="number" min="1000" required></div>
+                    <div class="col-md-6"><label class="form-label" for="financeIncome">Maandinkomen USD *</label><input class="form-control" id="financeIncome" name="monthlyIncome" type="number" min="0" required></div>
+                    <div class="col-12"><label class="form-label" for="financeNotes">Voertuig of extra uitleg</label><textarea class="form-control" id="financeNotes" name="notes"></textarea></div>
+                    <div class="col-12"><div class="form-check"><input class="form-check-input" id="financeConsent" name="consent" type="checkbox" required><label class="form-check-label" for="financeConsent">Ik ga akkoord met gegevensverwerking. *</label></div></div>
+                  </div>
+                  <button class="btn btn-brand mt-3" type="submit">Adviesaanvraag verzenden</button>
+                </form>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="d-md-flex justify-content-between">
+        <div><h2 class="h5">The Car Deal-oog</h2><address>Anamoestraat 18, Paramaribo</address></div>
+        <div><h3>Contact</h3><a href="tel:+5978882233">+597 888-2233</a><br><a href="mailto:info@cardeal-oog.com">info@cardeal-oog.com</a></div>
+        <div><h3>Account</h3><a href="mijnaccount.html#account">Mijn account</a><br><a data-staff-only hidden href="../Index.html#backoffice">Backoffice</a></div>
+      </div>
+      <div class="footer-line">© <span data-current-year></span> The Car Deal-oog</div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="serviceSuccessTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content text-center"><div class="modal-body p-5"><div class="success-mark">✓</div><h2 class="h4" id="serviceSuccessTitle" data-success-title>Aanvraag verzonden</h2><p class="text-soft" data-success-message></p><button class="btn btn-brand" type="button" data-bs-dismiss="modal" data-success-ok>OK</button></div></div></div>
+  </div>
+  <div class="toast-container position-fixed top-0 end-0 p-3 mt-5" data-toast-container></div>
+
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/commerce.js"></script>
+</body>
+</html>

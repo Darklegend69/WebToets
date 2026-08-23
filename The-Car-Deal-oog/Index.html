@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="nl" data-theme="dark">
+<head>
+  <!-- Student: ____________________ | Onderdeel: Home, videohero en carrousel -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Car Deal-oog: een moderne autowebshop voor kopen, verkopen, huren en financieren in Paramaribo.">
+  <meta name="theme-color" content="#08090b">
+  <title>Welkom bij The Car Deal-oog</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/shared.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="home-body" data-page="home">
+  <a class="skip-link" href="#mainContent">Ga direct naar de inhoud</a>
+
+  <div class="loading-screen" data-loading-screen aria-hidden="true">
+    <img class="loading-logo" src="images/logo/the-car-deal-oog-logo-v2.png" alt="">
+  </div>
+
+  <nav class="navbar navbar-dark navbar-expand-xl sticky-top site-navbar" aria-label="Hoofdnavigatie">
+    <div class="container-fluid px-lg-4">
+      <a class="navbar-brand brand-link" href="Index.html">
+        <img src="images/logo/the-car-deal-oog-logo-v2.png" alt="Logo van The Car Deal-oog">
+      </a>
+
+      <div class="d-flex align-items-center gap-2 order-xl-3">
+        <button class="theme-switch" type="button" data-theme-toggle aria-label="Wissel kleurthema">
+          <span class="theme-track" aria-hidden="true"><span class="theme-thumb"></span></span>
+          <span class="theme-text" data-theme-text>Donker</span>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#homeNavigation" aria-controls="homeNavigation" aria-expanded="false" aria-label="Open menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse order-xl-2" id="homeNavigation">
+        <ul class="navbar-nav ms-auto me-xl-3 align-items-xl-center">
+          <li class="nav-item"><a class="nav-link" data-nav="home" href="Index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="cars" href="templates/autos.html">Auto's</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Diensten</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="templates/diensten.html">Alle diensten</a></li>
+              <li><a class="dropdown-item" href="templates/diensten.html#sell">Auto verkopen</a></li>
+              <li><a class="dropdown-item" href="templates/diensten.html#buy">Auto inkopen</a></li>
+              <li><a class="dropdown-item" href="templates/diensten.html#rent">Auto huren</a></li>
+              <li><a class="dropdown-item" href="templates/diensten.html#finance">Financiering & verzekering</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" data-nav="about" href="templates/over-ons.html">Over ons</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Media</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="templates/videos.html">Mijn video's</a></li>
+              <li><a class="dropdown-item" href="templates/game.html">Game</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="templates/mijnaccount.html#account"><span data-auth-name>Mijn account</span></a></li>
+          <li class="nav-item" data-staff-only hidden><a class="nav-link" href="#backoffice" data-open-backoffice>Backoffice</a></li>
+          <li class="nav-item" data-logout-button hidden><button class="btn btn-sm btn-outline-danger ms-xl-1" type="button">Uitloggen</button></li>
+        </ul>
+
+        <form class="d-flex nav-search" action="templates/autos.html" method="get" role="search">
+          <input class="form-control form-control-sm" type="search" name="q" placeholder="Zoeken" aria-label="Zoek een auto">
+          <button class="btn btn-sm btn-brand" type="submit" aria-label="Start zoeken">⌕</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main id="mainContent">
+    <header class="home-hero" data-home-hero>
+      <video class="home-hero-video" data-hero-video autoplay muted loop playsinline preload="metadata" poster="images/banners/showroom-hero.png">
+        <source src="videos/hero-background.mp4" type="video/mp4">
+      </video>
+      <div class="home-hero-overlay" aria-hidden="true"></div>
+      <div class="home-hero-grid" aria-hidden="true"></div>
+
+      <div class="container position-relative">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-8">
+            <div class="home-hero-copy">
+              <span class="small-label">Premium mobiliteit in Paramaribo</span>
+              <h1>Uw volgende rit begint met de <span>juiste deal.</span></h1>
+              <p class="lead">Koop, verkoop, huur of financier uw auto met duidelijke afspraken en persoonlijke begeleiding.</p>
+              <div class="hero-buttons mt-4">
+                <a class="btn btn-brand btn-lg" href="templates/autos.html">Bekijk auto's</a>
+                <a class="btn btn-outline-light btn-lg" href="templates/diensten.html">Onze diensten</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 d-none d-lg-block">
+            <aside class="hero-status tilt-card" aria-label="Showroominformatie">
+              <span class="small-label">Showroom live</span>
+              <div class="hero-status-row"><span>Premium auto's</span><strong>4+</strong></div>
+              <div class="hero-status-row"><span>Complete diensten</span><strong>4</strong></div>
+              <div class="hero-status-row"><span>Reactietijd</span><strong>24u</strong></div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container home-content">
+      <div class="row g-4">
+        <div class="col-lg-3">
+          <aside class="side-menu" aria-label="Externe links">
+            <h2>Handige autolinks</h2>
+            <ul>
+              <li><a href="https://www.google.com/maps" target="_blank" rel="noopener">Google Maps ↗</a></li>
+              <li><a href="https://www.michelin.com" target="_blank" rel="noopener">Michelin ↗</a></li>
+              <li><a href="https://www.nhtsa.gov/vehicle-safety" target="_blank" rel="noopener">Vehicle Safety ↗</a></li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="col-lg-9">
+          <section class="mb-5 reveal-item" aria-labelledby="serviceHeading">
+            <div class="home-section-title">
+              <span class="small-label">Alles onder één dak</span>
+              <h1 id="serviceHeading">Vier routes naar uw volgende auto</h1>
+              <p class="text-soft">Dit is de tweede verplichte H1 op de welkomstpagina. Kies de dienst die bij uw situatie past.</p>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <article class="home-service-card tilt-card">
+                  <span class="service-number">01</span>
+                  <h2 class="h4">Auto verkopen</h2>
+                  <p class="text-soft">Vraag een waardebepaling aan en bied uw voertuig aan.</p>
+                  <a href="templates/diensten.html#sell">Open verkoopformulier →</a>
+                </article>
+              </div>
+              <div class="col-md-6">
+                <article class="home-service-card tilt-card">
+                  <span class="service-number">02</span>
+                  <h2 class="h4">Auto inkopen</h2>
+                  <p class="text-soft">Geef uw budget en wensen door voor een passende selectie.</p>
+                  <a href="templates/diensten.html#buy">Open inkoopformulier →</a>
+                </article>
+              </div>
+              <div class="col-md-6">
+                <article class="home-service-card tilt-card">
+                  <span class="service-number">03</span>
+                  <h2 class="h4">Auto huren</h2>
+                  <p class="text-soft">Kies een periode en huurtype voor tijdelijke mobiliteit.</p>
+                  <a href="templates/diensten.html#rent">Open huurformulier →</a>
+                </article>
+              </div>
+              <div class="col-md-6">
+                <article class="home-service-card tilt-card">
+                  <span class="service-number">04</span>
+                  <h2 class="h4">Financiering & verzekering</h2>
+                  <p class="text-soft">Vraag een voorstel aan dat past bij uw inkomen en auto.</p>
+                  <a href="templates/diensten.html#finance">Open adviesformulier →</a>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="mb-5 reveal-item" aria-labelledby="carouselHeading">
+            <div class="home-section-title">
+              <span class="small-label">Bootstrap 5.2 carrousel</span>
+              <h2 id="carouselHeading">Vier auto's, vier bestemmingen</h2>
+              <p class="text-soft">Klik op een foto om direct de details van dat voertuig te openen.</p>
+            </div>
+
+            <div id="homeCarCarousel" class="carousel slide home-carousel" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#homeCarCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Foto 1"></button>
+                <button type="button" data-bs-target="#homeCarCarousel" data-bs-slide-to="1" aria-label="Foto 2"></button>
+                <button type="button" data-bs-target="#homeCarCarousel" data-bs-slide-to="2" aria-label="Foto 3"></button>
+                <button type="button" data-bs-target="#homeCarCarousel" data-bs-slide-to="3" aria-label="Foto 4"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <a href="templates/autos.html?id=car-aurora-e7">
+                    <img class="d-block w-100 photo-enter" src="images/cars/car-aurora.png" alt="Blauwe Aether Aurora E7 in de showroom">
+                    <div class="carousel-caption"><h2>Aether Aurora E7</h2><p>Elektrisch, snel en comfortabel.</p></div>
+                  </a>
+                </div>
+                <div class="carousel-item">
+                  <a href="templates/autos.html?id=car-crest-lx">
+                    <img class="d-block w-100 photo-enter" src="images/cars/car-velar.png" alt="Witte Vantage Crest LX in de showroom">
+                    <div class="carousel-caption"><h2>Vantage Crest LX</h2><p>Een ruime hybride SUV.</p></div>
+                  </a>
+                </div>
+                <div class="carousel-item">
+                  <a href="templates/autos.html?id=car-pulse-gt">
+                    <img class="d-block w-100 photo-enter" src="images/cars/car-nova.png" alt="Rode Novara Pulse GT in de showroom">
+                    <div class="carousel-caption"><h2>Novara Pulse GT</h2><p>Sportief met dagelijks comfort.</p></div>
+                  </a>
+                </div>
+                <div class="carousel-item">
+                  <a href="templates/autos.html?id=car-forge-hx">
+                    <img class="d-block w-100 photo-enter" src="images/cars/car-titan.png" alt="Grijze Titan Forge HX in de showroom">
+                    <div class="carousel-caption"><h2>Titan Forge HX</h2><p>Kracht voor werk en avontuur.</p></div>
+                  </a>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#homeCarCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Vorige foto</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#homeCarCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Volgende foto</span>
+              </button>
+            </div>
+          </section>
+
+          <section class="mb-5 reveal-item" aria-labelledby="showroomHeading">
+            <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-3">
+              <div class="home-section-title mb-0">
+                <span class="small-label">Showroom</span>
+                <h2 id="showroomHeading">Uitgelichte auto's</h2>
+              </div>
+              <a class="btn btn-outline-brand" href="templates/autos.html">Bekijk alle auto's</a>
+            </div>
+            <div class="row g-4" data-home-car-grid></div>
+          </section>
+
+          <section class="mb-5 reveal-item" aria-label="Bedrijfscijfers">
+            <div class="row g-3">
+              <div class="col-6 col-xl-3"><div class="home-stat tilt-card"><strong data-counter="96" data-suffix="%">0%</strong><span>Tevreden klanten</span></div></div>
+              <div class="col-6 col-xl-3"><div class="home-stat tilt-card"><strong data-counter="4">0</strong><span>Diensten</span></div></div>
+              <div class="col-6 col-xl-3"><div class="home-stat tilt-card"><strong data-counter="24" data-suffix="u">0u</strong><span>Reactietijd</span></div></div>
+              <div class="col-6 col-xl-3"><div class="home-stat tilt-card"><strong data-counter="100" data-suffix="%">0%</strong><span>Transparant</span></div></div>
+            </div>
+          </section>
+
+          <section class="home-promo reveal-item" aria-labelledby="promoHeading">
+            <div class="row g-0 align-items-center">
+              <div class="col-xl-7">
+                <video controls preload="metadata" poster="images/cars/car-aurora.png">
+                  <source src="videos/promotional-video.mp4" type="video/mp4">
+                  Uw browser ondersteunt deze video niet.
+                </video>
+              </div>
+              <div class="col-xl-5">
+                <div class="home-promo-text">
+                  <span class="small-label">Promotievideo</span>
+                  <h2 id="promoHeading">Meer dan een showroom</h2>
+                  <p>Bekijk hoe technologie en persoonlijke aandacht samenkomen.</p>
+                  <a class="btn btn-brand" href="templates/videos.html">Alle video's</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <img class="footer-logo mb-2" src="images/logo/the-car-deal-oog-logo-v2.png" alt="The Car Deal-oog">
+          <h2 class="h5">The Car Deal-oog</h2>
+          <p>Uw showroom voor kopen, verkopen, huren en financieren.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h3>Pagina's</h3>
+          <ul class="list-unstyled">
+            <li><a href="templates/autos.html">Auto's</a></li>
+            <li><a href="templates/diensten.html">Diensten</a></li>
+            <li><a href="templates/over-ons.html">Over ons</a></li>
+            <li><a href="templates/videos.html">Video's</a></li>
+            <li><a href="templates/game.html">Game</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h3>Account</h3>
+          <ul class="list-unstyled">
+            <li><a href="templates/mijnaccount.html#login">Inloggen</a></li>
+            <li><a href="templates/mijnaccount.html#register">Registreren</a></li>
+            <li><a href="templates/mijnaccount.html#account">Mijn account</a></li>
+            <li data-staff-only hidden><a href="#backoffice" data-open-backoffice>Backoffice</a></li>
+            <li data-logout-button hidden><a href="#">Uitloggen</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h3>Contact & adres</h3>
+          <address class="mb-1">Anamoestraat 18, Paramaribo, Suriname</address>
+          <p class="mb-1"><a href="tel:+5978882233">+597 888-2233</a></p>
+          <p class="mb-1"><a href="mailto:info@cardeal-oog.com">info@cardeal-oog.com</a></p>
+          <small>Ma–Vr 08:00–17:30 · Za 09:00–14:00</small>
+        </div>
+      </div>
+      <div class="footer-line d-flex flex-wrap justify-content-between gap-2">
+        <span>© <span data-current-year></span> The Car Deal-oog</span>
+        <span>Privacy · Voorwaarden · Cookies</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="backofficeModal" tabindex="-1" aria-labelledby="backofficeTitle" aria-hidden="true" data-backoffice-modal>
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <span class="small-label">Beveiligde demo-omgeving</span>
+            <h2 class="modal-title h4" id="backofficeTitle">Backoffice</h2>
+          </div>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Sluiten"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div data-backoffice-guard class="empty-message" hidden></div>
+
+            <div data-backoffice-protected hidden>
+              <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+                <div>
+                  <span class="role-badge" data-backoffice-role></span>
+                  <h3 class="h4 mt-2 mb-0">Welkom, <span data-backoffice-name></span></h3>
+                </div>
+                <button class="btn btn-outline-danger" type="button" data-logout-button>Uitloggen</button>
+              </div>
+
+              <div class="alert alert-info" data-manager-note hidden>
+                Managerrechten: auto's bekijken en bewerken en aanvragen verwerken. Toevoegen, verwijderen en gebruikersbeheer zijn alleen voor Admin.
+              </div>
+
+              <ul class="nav nav-pills dashboard-tabs mb-4" role="tablist">
+                <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#dashboardOverview" type="button">Overzicht</button></li>
+                <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#dashboardCars" type="button">Auto's</button></li>
+                <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#dashboardOffers" type="button">Offertes</button></li>
+                <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#dashboardServices" type="button">Diensten</button></li>
+                <li class="nav-item" data-admin-only><button class="nav-link" data-bs-toggle="pill" data-bs-target="#dashboardUsers" type="button">Gebruikers</button></li>
+                <li class="nav-item" data-admin-only><button class="nav-link" data-bs-toggle="pill" data-bs-target="#dashboardRoles" type="button">Rollen</button></li>
+              </ul>
+
+              <div class="tab-content">
+                <section class="tab-pane fade show active" id="dashboardOverview">
+                  <div class="row g-3">
+                    <div class="col-6 col-xl-3"><div class="dashboard-stat"><strong data-stat-cars>0</strong><span>Auto's</span></div></div>
+                    <div class="col-6 col-xl-3"><div class="dashboard-stat"><strong data-stat-offers>0</strong><span>Offertes</span></div></div>
+                    <div class="col-6 col-xl-3"><div class="dashboard-stat"><strong data-stat-services>0</strong><span>Diensten</span></div></div>
+                    <div class="col-6 col-xl-3"><div class="dashboard-stat"><strong data-stat-users>0</strong><span>Gebruikers</span></div></div>
+                  </div>
+                  <div class="dashboard-box mt-4">
+                    <h3 class="h5">Demo-opslag</h3>
+                    <p class="mb-0 text-soft">Auto's, gebruikers en aanvragen worden met JavaScript in de browser opgeslagen.</p>
+                  </div>
+                </section>
+
+                <section class="tab-pane fade" id="dashboardCars">
+                  <div class="dashboard-box">
+                    <div class="d-flex flex-wrap justify-content-between gap-2 mb-3">
+                      <div><h3 class="h5 mb-1">Autobeheer</h3><p class="text-soft mb-0">Bekijken, toevoegen, bewerken en verwijderen.</p></div>
+                      <button class="btn btn-brand" type="button" data-add-car data-admin-only>Auto toevoegen</button>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table table-hover align-middle">
+                        <thead><tr><th>Foto</th><th>Auto</th><th>Jaar</th><th>Prijs</th><th>Km</th><th>Status</th><th>Actie</th></tr></thead>
+                        <tbody data-backoffice-cars></tbody>
+                      </table>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="tab-pane fade" id="dashboardOffers">
+                  <div class="dashboard-box">
+                    <h3 class="h5">Offerteaanvragen</h3>
+                    <div class="table-responsive">
+                      <table class="table table-hover align-middle">
+                        <thead><tr><th>Referentie</th><th>Klant</th><th>Auto</th><th>Inruil</th><th>Financiering</th><th>Status</th></tr></thead>
+                        <tbody data-backoffice-offers></tbody>
+                      </table>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="tab-pane fade" id="dashboardServices">
+                  <div class="dashboard-box">
+                    <h3 class="h5">Dienstaanvragen</h3>
+                    <div class="table-responsive">
+                      <table class="table table-hover align-middle">
+                        <thead><tr><th>Referentie</th><th>Dienst</th><th>Klant</th><th>Samenvatting</th><th>Status</th></tr></thead>
+                        <tbody data-backoffice-services></tbody>
+                      </table>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="tab-pane fade" id="dashboardUsers" data-admin-only>
+                  <div class="dashboard-box">
+                    <div class="d-flex flex-wrap justify-content-between gap-2 mb-3">
+                      <div><h3 class="h5 mb-1">Gebruikersbeheer</h3><p class="text-soft mb-0">Gebruikers kunnen direct met hun toegewezen rol inloggen.</p></div>
+                      <button class="btn btn-brand" type="button" data-add-user>Gebruiker toevoegen</button>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table table-hover align-middle">
+                        <thead><tr><th>Naam</th><th>Contact</th><th>Rol</th><th>Status</th><th>Datum</th><th>Actie</th></tr></thead>
+                        <tbody data-backoffice-users></tbody>
+                      </table>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="tab-pane fade" id="dashboardRoles" data-admin-only>
+                  <div class="row g-4">
+                    <div class="col-md-6"><article class="dashboard-box h-100"><h3>Admin</h3><ul><li>Volledige toegang</li><li>Auto's toevoegen en verwijderen</li><li>Gebruikers en rollen beheren</li><li>Alle aanvragen verwerken</li></ul></article></div>
+                    <div class="col-md-6"><article class="dashboard-box h-100"><h3>Manager</h3><ul><li>Auto's bekijken en bewerken</li><li>Offertes verwerken</li><li>Dienstaanvragen verwerken</li><li>Geen gebruikersbeheer</li></ul></article></div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="carEditorModal" tabindex="-1" aria-labelledby="carEditorTitle" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header"><h2 class="modal-title h5" id="carEditorTitle" data-car-editor-title>Auto bewerken</h2><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Sluiten"></button></div>
+        <form data-car-editor class="needs-validation" novalidate>
+          <div class="modal-body">
+            <input name="id" type="hidden">
+            <input name="image" type="hidden">
+            <div class="row g-3">
+              <div class="col-md-4"><label class="form-label">Merk *</label><input class="form-control" name="brand" required></div>
+              <div class="col-md-4"><label class="form-label">Model *</label><input class="form-control" name="model" required></div>
+              <div class="col-md-2"><label class="form-label">Bouwjaar *</label><input class="form-control" name="year" type="number" min="1990" max="2035" required></div>
+              <div class="col-md-2"><label class="form-label">Prijs USD *</label><input class="form-control" name="price" type="number" min="0" required></div>
+              <div class="col-md-3"><label class="form-label">Kilometerstand *</label><input class="form-control" name="mileage" type="number" min="0" required></div>
+              <div class="col-md-3"><label class="form-label">Brandstof *</label><select class="form-select" name="fuel" required><option>Benzine</option><option>Diesel</option><option>Hybride</option><option>Elektrisch</option></select></div>
+              <div class="col-md-3"><label class="form-label">Transmissie *</label><select class="form-select" name="transmission" required><option>Automaat</option><option>Handgeschakeld</option></select></div>
+              <div class="col-md-3"><label class="form-label">Beschikbaarheid *</label><select class="form-select" name="availability" required><option>Beschikbaar</option><option>Gereserveerd</option><option>Verkocht</option></select></div>
+              <div class="col-md-4"><label class="form-label">Motor *</label><input class="form-control" name="engine" required></div>
+              <div class="col-md-4"><label class="form-label">Vermogen *</label><input class="form-control" name="power" required></div>
+              <div class="col-md-4"><label class="form-label">Kleur *</label><input class="form-control" name="color" required></div>
+              <div class="col-md-4"><img class="upload-preview" data-car-image-preview src="" alt="Voorbeeld van de gekozen autofoto"></div>
+              <div class="col-md-8">
+                <label class="form-label" for="carImageInput">Kies zelf een autofoto *</label>
+                <input class="form-control" id="carImageInput" name="imageFile" type="file" accept="image/*" data-car-image-input>
+                <div class="form-text">Alle beeldformaten die de browser kan openen worden geaccepteerd en naar een kleinere WebP-versie omgezet.</div>
+                <div class="small mt-2" data-car-image-status>Kies een foto vanaf uw apparaat.</div>
+              </div>
+              <div class="col-md-6"><div class="form-check"><input class="form-check-input" id="carFeatured" name="featured" type="checkbox"><label class="form-check-label" for="carFeatured">Op homepage tonen</label></div></div>
+              <div class="col-12"><label class="form-label">Beschrijving *</label><textarea class="form-control" name="description" rows="4" required></textarea></div>
+            </div>
+          </div>
+          <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Annuleren</button><button class="btn btn-brand" type="submit">Auto opslaan</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="userEditorModal" tabindex="-1" aria-labelledby="userEditorTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header"><h2 class="modal-title h5" id="userEditorTitle" data-user-editor-title>Gebruiker</h2><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Sluiten"></button></div>
+        <form data-user-editor class="needs-validation" novalidate>
+          <div class="modal-body">
+            <input name="id" type="hidden">
+            <div class="row g-3">
+              <div class="col-md-6"><label class="form-label">Volledige naam *</label><input class="form-control" name="name" required></div>
+              <div class="col-md-6"><label class="form-label">Gebruikersnaam *</label><input class="form-control" name="username" required></div>
+              <div class="col-md-6"><label class="form-label">E-mail *</label><input class="form-control" name="email" type="email" required></div>
+              <div class="col-md-6"><label class="form-label">Telefoon</label><input class="form-control" name="phone"></div>
+              <div class="col-md-6"><label class="form-label">Wachtwoord</label><input class="form-control" name="password" type="text" placeholder="Leeg laat bestaand wachtwoord staan"></div>
+              <div class="col-md-3"><label class="form-label">Rol *</label><select class="form-select" name="role" required><option>Admin</option><option>Manager</option><option>Customer</option></select></div>
+              <div class="col-md-3"><label class="form-label">Status *</label><select class="form-select" name="status" required><option>Actief</option><option>Geblokkeerd</option></select></div>
+            </div>
+          </div>
+          <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Annuleren</button><button class="btn btn-brand" type="submit">Gebruiker opslaan</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successTitle" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center">
+        <div class="modal-body p-5">
+          <div class="success-mark" aria-hidden="true">✓</div>
+          <h2 class="h4" id="successTitle" data-success-title>Gelukt</h2>
+          <p class="text-soft" data-success-message>Uw actie is verwerkt.</p>
+          <button class="btn btn-brand px-5" type="button" data-bs-dismiss="modal" data-success-ok>OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container position-fixed top-0 end-0 p-3 mt-5" data-toast-container></div>
+
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/commerce.js"></script>
+</body>
+</html>

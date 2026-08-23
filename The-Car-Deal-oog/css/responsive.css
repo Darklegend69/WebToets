@@ -1,0 +1,52 @@
+/* Kleine, gedeelde breakpoints. Pagina-eigen regels staan in het paginabestand. */
+
+@media (max-width: 1199.98px) {
+  .site-navbar .navbar-collapse {
+    padding: 15px 0 8px;
+  }
+
+  .nav-search {
+    width: 100%;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .side-menu {
+    position: static;
+    margin-bottom: 18px;
+  }
+
+  .page-title-block {
+    padding: 42px 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .brand-link {
+    min-width: 132px;
+  }
+
+  .brand-link img {
+    width: 132px;
+    height: 44px;
+  }
+
+  .theme-text {
+    display: none;
+  }
+
+  .theme-switch {
+    padding: 6px;
+  }
+
+  .equal-photo {
+    height: 210px;
+  }
+
+  .site-footer {
+    margin-top: 45px;
+    padding-top: 36px;
+  }
+}
+
